@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Apartment 3D · Interior concept by Jyothis · V265</title>
+<title>Apartment 3D · Interior concept by Jyothis · V267</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Albert+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -87,9 +87,8 @@ body.measuring #measHint{top:calc(env(safe-area-inset-top,0px) + 92px)}
 @media (pointer:coarse){.h-fine{display:none}.h-touch{display:inline}}
 .wk-hint{opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;position:absolute;left:50%;top:64px;transform:translateX(-50%);margin:0;max-width:calc(100% - 32px);text-align:center;color:var(--ink-2);font:400 11px/1.4 var(--f-mono);background:var(--panel);border:1px solid var(--panel-line);border-radius:6px;padding:8px 10px}
 .wk-hint.on{opacity:.92;visibility:visible}
-#miniPlan{position:absolute;left:78px;top:52px;pointer-events:auto;height:30px;padding:0 13px;border-radius:15px;font:600 12px/1 var(--f-mono);color:var(--ink-2);background:color-mix(in srgb,var(--panel) 75%,transparent);border:1px solid var(--panel-line);cursor:pointer}
 #eyeToggle{position:absolute;left:162px;top:52px;pointer-events:auto;height:30px;padding:0 13px;border-radius:15px;font:600 12px/1 var(--f-mono);color:var(--ink-2);background:color-mix(in srgb,var(--panel) 75%,transparent);border:1px solid var(--panel-line);cursor:pointer}
-#photoGal,#photoGo,#photoSens,#photoLook,#bareBtn{pointer-events:auto}#photoLook[aria-pressed="true"]{background:var(--accent,#3a7)!important;color:#fff}
+#photoGal,#photoGo,#photoLook,#bareBtn{pointer-events:auto}#photoLook[aria-pressed="true"]{background:var(--accent,#3a7)!important;color:#fff}
 #photoBtn{position:absolute;left:236px;top:52px;pointer-events:auto;height:30px;padding:0 13px;border-radius:15px;font:600 12px/1 var(--f-mono);color:var(--ink-2);background:color-mix(in srgb,var(--panel) 75%,transparent);border:1px solid var(--panel-line);cursor:pointer}
 #eyeToggle[aria-pressed="true"]{background:var(--sage);color:var(--sage-ink);border-color:var(--sage)}
 #miniToggle{position:absolute;left:16px;top:52px;pointer-events:auto;height:30px;padding:0 13px;border-radius:15px;font:600 12px/1 var(--f-mono);color:var(--ink-2);background:color-mix(in srgb,var(--panel) 75%,transparent);border:1px solid var(--panel-line);cursor:pointer}
@@ -135,14 +134,24 @@ body.walking #fab #walkShot{display:flex;width:34px;height:34px;border-radius:50
 #hideAll{position:fixed;top:14px;right:58px;z-index:70;width:36px;height:36px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);background:var(--panel);border:1px solid var(--panel-line)}
 #hideAll svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 body.hideui #hideAll{opacity:.55}
+#walkMore{position:absolute;right:16px;top:52px;width:34px;height:34px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;pointer-events:auto;cursor:pointer;color:var(--ink);background:var(--panel);border:1px solid var(--panel-line);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+#walkMore svg,#ovMore svg{width:18px;height:18px;fill:currentColor}
+#fab #ovMore{width:34px;height:34px;padding:0;border-radius:50%;align-self:flex-end;flex:none}
+#fab #ovMore[aria-pressed="true"]{background:var(--sage);color:var(--sage-ink);border-color:var(--sage)}
+body:not(.walking):not(.ovMore) #fab > :not(#ovMore){display:none!important}
+body.walking #ovMore{display:none!important}
+#walkMore[aria-pressed="true"]{background:var(--sage);color:var(--sage-ink);border-color:var(--sage)}
+body.walking:not(.wkMore) #fab,body.walking:not(.wkMore) #walkTour,body.walking:not(.wkMore) #walkRec,body.walking:not(.wkMore) #walkInfo,body.walking:not(.wkMore) #walkKey{display:none!important}
 #walkTools #walkLens{font:700 12px/1 var(--f-ui);letter-spacing:-.02em;pointer-events:auto}
 body.inAlign #hideAll{top:auto;bottom:10px;right:auto;left:10px}
 body.chromeoff header.head,body.chromeoff #fab,body.chromeoff nav.dock,body.chromeoff #walkUI,body.chromeoff #walkRefresh,body.chromeoff #cmpDial,body.chromeoff #spinBtn,body.chromeoff #spinPanel,body.chromeoff #nlWrap,body.chromeoff #viewKey,body.chromeoff #viewInfo,body.chromeoff #guide,body.hideui #tags{visibility:hidden!important}
 body.hideui #photoUI [data-pclose],body.hideui #photoUI [data-pghost],body.hideui #photoUI [data-pop],body.hideui #photoUI [data-ppad],body.hideui #photoUI [data-pinfo],body.hideui #photoUI .pmorebox,body.hideui #photoAlign [data-pa-panel],body.hideui #photoAlign [data-pa-pill],body.hideui #photoAlign [data-pa-thumb],body.hideui #photoAlign [data-pa-pinbar]{visibility:hidden!important}
 #photoUI [data-pinfo]{padding-right:60px!important;box-sizing:border-box}
 #photoUI .pmorebox:not(.open) [data-psens],#photoUI .pmorebox:not(.open) [data-pnorth],#photoUI .pmorebox:not(.open) [data-pfine]{display:none}
-#photoAlign [data-pa-panel]:not(.more) .pa-room,#photoAlign [data-pa-panel]:not(.more) [data-pa-undo],#photoAlign [data-pa-panel]:not(.more) [data-pa-sug]{display:none!important}
-#walkTools #miniPlan,#walkTools #photoSens{display:none!important}
+#photoAlign canvas[data-pa-img].split{opacity:1!important;clip-path:inset(0 calc(100% - var(--sx,50%)) 0 0)}
+#photoAlign [data-pa-split][aria-pressed="true"]{background:var(--sage)!important;color:var(--sage-ink)!important;border-color:var(--sage)!important}
+body.hideui #photoAlign [data-pa-split-h] span{visibility:hidden}
+#photoAlign [data-pa-panel]:not(.more) .pa-room,#photoAlign [data-pa-panel]:not(.more) [data-pa-undo]{display:none!important}
 #photoTray{position:absolute;left:0;right:0;bottom:50px;display:none;gap:12px;justify-content:flex-end;padding-right:12px;box-sizing:border-box;align-items:flex-start;pointer-events:none}
 #photoTray.open{display:flex}
 #photoTray .ptr{display:flex;flex-direction:column;align-items:center;gap:4px;pointer-events:auto}
@@ -347,11 +356,18 @@ body.capm #capHud button,body.capm #recPill button{cursor:pointer!important}
 </div>
 <div id="photoAlign" hidden style="position:fixed;inset:0;z-index:59;pointer-events:none;color:#fff;font:13px var(--f-ui)">
  <canvas data-pa-img style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:.5;pointer-events:none"></canvas>
+ <div data-pa-split-h hidden style="position:absolute;top:0;bottom:0;left:50%;width:44px;margin-left:-22px;touch-action:none;pointer-events:auto;cursor:ew-resize">
+  <div style="position:absolute;left:21px;top:0;bottom:0;width:2px;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.6)"></div>
+  <div style="position:absolute;left:4px;top:50%;margin-top:-18px;width:36px;height:36px;border-radius:50%;background:rgba(20,28,24,.85);border:2px solid #fff;display:flex;align-items:center;justify-content:center;font:700 14px var(--f-ui);color:#fff">&#9664;&#9654;</div>
+  <span style="position:absolute;right:30px;top:calc(50% + 26px);font:600 11px var(--f-ui);padding:2px 7px;border-radius:9px;background:rgba(20,28,24,.8);color:#fff">Photo</span>
+  <span style="position:absolute;left:30px;top:calc(50% + 26px);font:600 11px var(--f-ui);padding:2px 7px;border-radius:9px;background:rgba(20,28,24,.8);color:#fff">Model</span>
+ </div>
  <div data-pa-panel style="position:absolute;left:50%;top:calc(env(safe-area-inset-top,0px) + 6px);transform:translateX(-50%);width:min(680px,calc(100% - 20px));padding:6px 10px;border-radius:16px;background:rgba(20,28,24,.84);pointer-events:auto;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;line-height:1.3">
   <span data-pa-grip title="Drag to move this panel" style="cursor:grab;touch-action:none;padding:2px 6px;font-size:18px;opacity:.75;user-select:none">&#8942;&#8942;</span>
   <label style="display:flex;gap:6px;align-items:center;font-size:12px">Photo <input type="range" min="0" max="100" value="50" data-pa-op style="width:100px"> Model</label>
   <label style="display:flex;gap:6px;align-items:center;font-size:12px">Lens <input type="range" min="30" max="140" step="0.5" value="84" data-pa-fov style="width:90px"> <span data-pa-fv style="min-width:36px;text-align:right">84&deg;</span></label>
   <label class="pa-room" style="display:flex;gap:6px;align-items:center;font-size:12px">Room <select data-pa-room style="font:12px var(--f-ui);padding:4px 6px;border-radius:8px;background:#22302a;color:#fff;border:1px solid rgba(255,255,255,.4);max-width:150px"><option value="">Auto</option></select></label>
+  <button type="button" data-pa-split aria-pressed="false" title="Compare: photo on the left of a sliding line, model on the right" style="font:600 12px var(--f-ui);padding:7px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;cursor:pointer">Compare</button>
   <span style="flex:1"></span>
   <button type="button" data-pa-pin title="Tap the same corners in the photo and in the model; the page works out where you stood" style="font:600 12px var(--f-ui);padding:7px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;cursor:pointer">Pin points</button>
   <button type="button" data-pa-undo hidden style="font:600 12px var(--f-ui);padding:7px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;cursor:pointer">Undo align</button>
@@ -359,7 +375,6 @@ body.capm #capHud button,body.capm #recPill button{cursor:pointer!important}
   <button type="button" data-pa-go style="font:600 12px var(--f-ui);padding:7px 14px;border-radius:16px;border:0;background:var(--sage);color:var(--sage-ink);cursor:pointer">Stamp &amp; save</button>
   <button type="button" data-pa-more aria-pressed="false" title="Room, undo and suggestions" style="font:600 12px var(--f-ui);padding:7px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;cursor:pointer">More</button>
   <button type="button" data-pa-min title="Minimise this panel" style="font:600 14px var(--f-ui);width:30px;height:30px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;cursor:pointer">&#9662;</button>
-  <div data-pa-sug style="flex-basis:100%;display:none;gap:6px;flex-wrap:wrap"></div>
   <div data-pa-msg style="flex-basis:100%;font-size:11.5px;opacity:.9;transition:opacity .6s"></div>
  </div>
  <div data-pa-thumb style="position:absolute;right:calc(env(safe-area-inset-right,0px) + 8px);bottom:calc(env(safe-area-inset-bottom,0px) + 8px);pointer-events:auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px">
@@ -399,7 +414,7 @@ body.capm #capHud button,body.capm #recPill button{cursor:pointer!important}
   <div class="title">
     <div class="mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="18.2" stroke-width="1.1" opacity=".55"/><path d="M16.5 11.5h10M22 11.5v13.4c0 4.6-2.6 6.6-6.2 6.6-2 0-3.5-.8-4.5-2.2" stroke-width="2"/><path d="M12.6 27.2c.7 1 1.4 1.8 2.6 2.2" stroke-width="2" opacity="0"/><circle cx="31.6" cy="8.6" r="1.7" fill="var(--t-acc)" stroke="none"/></svg></div>
     <div>
-      <p class="eyebrow">Veegaland Maybell &middot; 4F &middot; V265</p>
+      <p class="eyebrow">Veegaland Maybell &middot; 4F &middot; V267</p>
       <h1>Apartment <span>3D</span></h1>
       <p class="sub">Type F &middot; 3 BHK &middot; 1,238 sq ft carpet &nbsp;|&nbsp; Interior concept by <b>Jyothis</b><br><button id="lblMode" type="button" aria-pressed="false" title="Room labels: minimal, detailed or off. Tap to change"><span class="lm-dot"></span><span id="lblTxt">Labels: Minimal</span></button></p>
     </div>
@@ -520,7 +535,6 @@ body.capm #capHud button,body.capm #recPill button{cursor:pointer!important}
 <div id="viewKey" hidden role="dialog" aria-label="Controls and icon guide"></div>
 <div id="walkUI" hidden>
 <canvas id="miniMap" width="360" height="500" aria-label="Apartment minimap. Tap a room to jump there." title="Tap a room to jump there" style="position:absolute;left:16px;top:58px;width:150px;height:208px;background:#faf8f3e8;border:1px solid #a9b3a5;border-radius:10px;pointer-events:auto;touch-action:none"></canvas>
-  <button id="miniPlan" class="wi" type="button" aria-label="Save floor plan as image" title="Save the floor plan as an image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11M7.5 10l4.5 4.5 4.5-4.5M4 15v4.5h16V15"/></svg></button>
   <button id="eyeToggle" class="wi" type="button" aria-pressed="false" aria-label="Switch between standing and seated eye height" title="Standing. Tap to sit"><svg class="se-st" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.6" r="2"/><path d="M12 7.6v7M8.3 10.2L12 8l3.7 2.2M12 14.6l-3 6.2M12 14.6l3 6.2"/></svg><svg class="se-sit" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="4.8" r="2"/><path d="M9 7.8v6.4h6.2M9 10.4l4.2 1.6M15.2 14.2v6.3M6.6 20.5h11"/></svg></button>
   <button id="photoBtn" class="wi" type="button" aria-label="Take a site photo stamped with this position in the model" title="Site photo stamped with your position and what you face"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5V5h3.5M16.5 5H20v3.5M20 15.5V19h-3.5M7.5 19H4v-3.5"/><path d="M12 7.5a3 3 0 0 1 3 3c0 2.3-3 5.5-3 5.5s-3-3.2-3-5.5a3 3 0 0 1 3-3z"/><circle cx="12" cy="10.5" r=".9"/></svg></button>
   <button id="miniToggle" class="wi" type="button" aria-pressed="true" aria-label="Show or hide the minimap" title="Show or hide the minimap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5l5.5-2 6 2 5.5-2v13l-5.5 2-6-2-5.5 2zM9 4.5v13M15 6.5v13"/></svg></button>
@@ -532,7 +546,6 @@ body.capm #capHud button,body.capm #recPill button{cursor:pointer!important}
   <button id="bareBtn" class="wi" type="button" aria-pressed="false" aria-label="Hide furniture and partitions, keep the walls" title="Bare room: hide furniture and partitions, keep walls, doors and windows"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3.5 12.5a1.5 1.5 0 0 1 3 0V15h11v-2.5a1.5 1.5 0 0 1 3 0V17h-17z"/><path d="M6 17v2M18 17v2"/><path d="M3 3l18 18"/></svg></button>
   <button id="photoGal" class="wi" type="button" aria-label="Stamp a photo already taken with the camera app" title="Stamp an existing photo: pick it, line it up with the model, save it with the caption"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><circle cx="9" cy="10.5" r="1.6"/><path d="M4 17l5-4.5 3.5 3L16 12l4 4.5"/></svg></button>
   <button id="photoGo" class="wi" type="button" aria-label="Go to the view of a stamped photo" title="Go to photo: pick a stamped photo and the camera moves to where it was taken"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-10.2A6 6 0 0 1 18 10.8C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></button>
-  <button id="photoSens" class="wi" type="button" aria-label="Sensor check: compass and tilt" title="Sensor check: shows the phone compass and tilt readings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 6.5l2.4 5.5L12 17.5 9.6 12z"/></svg></button>
   <button id="photoLook" class="wi" type="button" aria-pressed="false" aria-label="Look around by turning the phone" title="Look by phone: the view follows how you turn and tilt the phone"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.5" y="3" width="9" height="18" rx="2"/><path d="M4 9c-1 1.5-1 4.5 0 6M20 9c1 1.5 1 4.5 0 6"/></svg></button>
   <button id="walkExit" type="button">Exit walk</button>
   <div class="wk-dot"></div>
@@ -58981,7 +58994,7 @@ function updateMiniMap(cvx){
  c.strokeStyle='#45564b';c.lineWidth=2*RES*.75;layout.walls.forEach(r=>{const h=r[2]-r[0]>=r[3]-r[1],lo=h?r[0]:r[1],hi=h?r[2]:r[3],fixed=h?(r[1]+r[3])/2:(r[0]+r[2])/2;let pos=lo;function seg(a,b){c.beginPath();c.moveTo(px(h?a:fixed),py(h?fixed:a));c.lineTo(px(h?b:fixed),py(h?fixed:b));c.stroke();}(r[4]||[]).slice().sort((a,b)=>a.a-b.a).forEach(o=>{seg(pos,o.a);pos=o.b;});seg(pos,hi);});
  /* room names */
  if(labels){c.textAlign='center';c.textBaseline='middle';labels.forEach(t=>{const n=SHORT[t[0]]||t[0],bal=t[0]==='Balcony';c.font=(bal?'600 '+(8*RES)+'px':'700 '+(9*RES)+'px')+' system-ui,sans-serif';c.lineWidth=3*RES;c.strokeStyle='rgba(250,248,243,.92)';c.lineJoin='round';c.strokeText(n,px(t[1]),py(t[2]));c.fillStyle=bal?'#6b7a70':'#2f3f35';c.fillText(n,px(t[1]),py(t[2]));});c.textAlign='start';c.textBaseline='alphabetic';}
- if(cvx){c.fillStyle='#45564b';c.font=(10*RES)+'px system-ui';c.fillText('Apartment 3D \u00b7 Interior concept by Jyothis \u00b7 V265 \u00b7 floor plan',10*RES,cv.height-8*RES);northArrow(c,cv);return;}
+ if(cvx){c.fillStyle='#45564b';c.font=(10*RES)+'px system-ui';c.fillText('Apartment 3D \u00b7 Interior concept by Jyothis \u00b7 V267 \u00b7 floor plan',10*RES,cv.height-8*RES);northArrow(c,cv);return;}
  const x=px(walk.x/SX+CX),y=py(walk.z/SZ+CY),angle=-walk.yaw-Math.PI/2;
  c.fillStyle='#4a957255';c.beginPath();c.moveTo(x,y);c.arc(x,y,24*RES,angle-.45,angle+.45);c.closePath();c.fill();c.fillStyle='#176a49';c.strokeStyle='#fff';c.lineWidth=1.5*RES;c.beginPath();c.arc(x,y,4.5*RES,0,Math.PI*2);c.fill();c.stroke();
  c.fillStyle='#45564b';c.font=(10*RES)+'px system-ui';c.fillText('Tap to jump',10*RES,cv.height-8*RES);northArrow(c,cv);
@@ -59002,9 +59015,6 @@ let glideId=0;
 })();
 const eb=document.getElementById('eyeToggle');
 if(eb){eb.addEventListener('pointerdown',function(e){e.stopPropagation();});eb.addEventListener('click',function(e){e.stopPropagation();const on=eb.getAttribute('aria-pressed')!=='true';eb.setAttribute('aria-pressed',String(on));if(walk.eye)walk.eye(on?1.1:1.6);});}
-const pb=document.getElementById('miniPlan');
-if(pb)pb.addEventListener('click',function(e){e.stopPropagation();const c=document.createElement('canvas');c.width=360;c.height=500;const x=c.getContext('2d');x.fillStyle='#faf8f3';x.fillRect(0,0,c.width,c.height);updateMiniMap(c);c.toBlob(function(b){if(b&&window.__saveFile)window.__saveFile('apartment-floor-plan.png',b);},'image/png');});
-if(pb)pb.addEventListener('pointerdown',function(e){e.stopPropagation();});
 updateMiniMap.drawPlan=function(c,wx,wz,yaw){updateMiniMap(c);const g=c.getContext('2d'),x=OX+(wx/SX+CX)*SC,y=OY+((wz/SZ+CY)-90)*SC,a=-yaw-Math.PI/2;g.fillStyle='#4a957255';g.beginPath();g.moveTo(x,y);g.arc(x,y,24*RES,a-.45,a+.45);g.closePath();g.fill();g.fillStyle='#b5483a';g.strokeStyle='#fff';g.lineWidth=1.5*RES;g.beginPath();g.arc(x,y,5*RES,0,Math.PI*2);g.fill();g.stroke();};
 return updateMiniMap;
 }
@@ -63363,7 +63373,7 @@ window.__walk=walk;
   function showHint(on,auto){clearTimeout(hintT);hintEl.classList.toggle('on',!!on);if(keyEl.hidden)infoBtn.setAttribute('aria-pressed',String(!!on));if(on&&auto!==false)hintT=setTimeout(function(){showHint(false);},4500);}
   const keyEl=document.getElementById('walkKey');
   const KEYS=[['walkDoors','Doors','Open or close all doors'],['walkWins','Windows','Open or close all windows and balcony doors'],['cameraViews','Saved views','Save or load camera angles'],['walkRefresh','Refresh','Reload the page, your view is kept'],['walkShot','Save picture','Save the current view as a PNG image'],
-    ['miniToggle','Map','Show or hide the minimap'],['miniPlan','Plan','Save the floor plan as an image'],['eyeToggle','Standing / seated','Switch eye height; the icon shows your posture'],['bareBtn','Bare room','Hide or show furniture and partitions; walls, doors and windows stay, and you can walk through where furniture was'],['walkExit','Exit walk','Leave walk mode and return to the overview'],['padMode','Joystick mode','Phones: choose whether the joystick turns the view or slides sideways'],['photoBtn','Photo','Site photo stamped with your position, room and what you face'],['walkInfo','Guide','This panel']];
+    ['miniToggle','Map','Show or hide the minimap'],['eyeToggle','Standing / seated','Switch eye height; the icon shows your posture'],['bareBtn','Bare room','Hide or show furniture and partitions; walls, doors and windows stay, and you can walk through where furniture was'],['walkExit','Exit walk','Leave walk mode and return to the overview'],['padMode','Joystick mode','Phones: choose whether the joystick turns the view or slides sideways'],['photoBtn','Photo','Site photo stamped with your position, room and what you face'],['walkInfo','Guide','This panel']];
   function buildKey(){
     let h='<button type="button" class="kx" aria-label="Close guide" title="Close">&times;</button><h4>Controls</h4><p>'+(matchMedia('(pointer:coarse)').matches?hintEl.querySelector('.h-touch').textContent:hintEl.querySelector('.h-fine').textContent).replace(/ \u00b7 tap i for the icon guide/,'')+'</p><h4>Icons</h4>';
     KEYS.forEach(function(k){const b=document.getElementById(k[0]);if(!b)return;const sv=b.querySelector('svg'),ic=k[0]==='walkInfo'?'<i style="font:700 15px Georgia,serif">i</i>':k[0]==='walkExit'?'&times;':k[0]==='eyeToggle'?[].slice.call(b.querySelectorAll('svg')).map(function(v){return v.outerHTML.replace(/class="[^"]*"/,'').replace('<svg','<svg style="width:14px;height:14px"');}).join(''):(sv?sv.outerHTML.replace(/class="[^"]*"/,''):'');
@@ -63878,7 +63888,7 @@ const updateMiniMap=createMinimap({layout:APARTMENT_LAYOUT,walk,camera,X,Z,SX,SZ
   tmin.addEventListener('click',function(e){e.stopPropagation();thid=false;thumbShow();});
   function fit(){if(!bm)return;if(bm!==tbm){tbm=bm;tbig=false;thid=false;thumbShow();}thumbSize();const pw=bm.width,ph=bm.height,vw=window.innerWidth,vh=window.innerHeight,sc=Math.min(vw/pw,vh/ph),diag=+fv.value*Math.PI/180,tv=Math.tan(diag/2)*ph/Math.hypot(pw,ph);
     camera.fov=Math.max(10,Math.min(150,2*Math.atan(tv*vh/(ph*sc))*180/Math.PI));camera.updateProjectionMatrix();fvl.innerHTML=(+fv.value).toFixed(fv.value%1?1:0)+'&deg;';}
-  function closeA(){cancelR=true;scanStop=true;endPins();pins=[];al.hidden=true;bm=null;undoPose=null;clearTimeout(minT);if(camera){camera.fov=oldFov;camera.updateProjectionMatrix();}}
+  function closeA(){cancelR=true;if(window.__splitOff)window.__splitOff();endPins();pins=[];al.hidden=true;bm=null;undoPose=null;clearTimeout(minT);if(camera){camera.fov=oldFov;camera.updateProjectionMatrix();}}
   gb.addEventListener('pointerdown',function(e){e.stopPropagation();});
   gb.addEventListener('click',function(e){e.stopPropagation();if(!walk.on)return;inp.click();});
   /* ---- Go to photo: read the position saved inside a stamped photo (or its file name) and move the camera there ---- */
@@ -63920,42 +63930,6 @@ const updateMiniMap=createMinimap({layout:APARTMENT_LAYOUT,walk,camera,X,Z,SX,SZ
         const x=document.createElement('button');x.type='button';x.textContent='Close';x.style.cssText=bs;x.addEventListener('click',hide);box.appendChild(x);});});
     window.__photoGo={read:readSaved,jump:jump,pick:function(files){fin.files=files;fin.dispatchEvent(new Event('change'));}};
   })();
-  /* ---- Sensor check: live compass / tilt readings, to see whether this page can read the phone sensors ---- */
-  (function(){
-    const sb=document.getElementById('photoSens');if(!sb)return;
-    const box=document.createElement('div');box.style.cssText='position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 10px);transform:translateX(-50%);z-index:62;width:min(340px,calc(100vw - 16px));display:none;background:rgba(20,20,20,.92);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:12px;padding:10px 12px;font:13px/1.45 var(--f-ui);pointer-events:auto';document.body.appendChild(box);
-    box.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><b>Sensor check</b><button type="button" data-sx style="font:700 15px var(--f-ui);background:none;border:0;color:#fff;cursor:pointer;padding:2px 6px">&times;</button></div><div data-st style="margin-bottom:6px"></div><pre data-sv style="margin:0 0 8px;font:12px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap"></pre><button type="button" data-sg style="font:600 12px var(--f-ui);padding:7px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.55);background:rgba(60,60,60,.9);color:#fff;cursor:pointer">Start sensors</button>';
-    const st=box.querySelector('[data-st]'),sv=box.querySelector('[data-sv]'),sg=box.querySelector('[data-sg]'),sx=box.querySelector('[data-sx]');
-    let on=false,empty=0,n=0,last=null,lastAbs=null,lastMot=null,tm=0,raf=0;
-    function f(v,d){return v==null||!isFinite(v)?'-':v.toFixed(d==null?1:d);}
-    function onO(e){if(e.alpha==null&&e.beta==null&&e.gamma==null&&e.webkitCompassHeading==null){empty++;return;}n++;last={a:e.alpha,b:e.beta,g:e.gamma,abs:e.absolute,wk:e.webkitCompassHeading,wa:e.webkitCompassAccuracy};}
-    function onA(e){lastAbs={a:e.alpha,b:e.beta,g:e.gamma};}
-    function onM(e){lastMot=e.accelerationIncludingGravity||null;}
-    function show(){
-      let head=null,src='';
-      if(last&&last.wk!=null&&isFinite(last.wk)){head=last.wk;src='iPhone compass';}
-      else if(lastAbs&&lastAbs.a!=null&&isFinite(lastAbs.a)){head=(360-lastAbs.a)%360;src='absolute orientation';}
-      else if(last&&last.abs&&last.a!=null&&isFinite(last.a)){head=(360-last.a)%360;src='absolute orientation';}
-      const b=last?last.b:null,g=last?last.g:null;
-      sv.textContent='Compass heading: '+(head==null?'not available':f(head,0)+' deg (magnetic, '+src+')')+'\nTilt up/down (beta): '+f(b)+' deg\nTilt sideways (gamma): '+f(g)+' deg\nEvents so far: '+n+'\nAccelerometer: '+(lastMot?f(lastMot.x,2)+', '+f(lastMot.y,2)+', '+f(lastMot.z,2):'-');
-      raf=requestAnimationFrame(function(){tm=setTimeout(show,200);});}
-    function stop(){on=false;clearTimeout(tm);cancelAnimationFrame(raf);window.removeEventListener('deviceorientation',onO,true);window.removeEventListener('deviceorientationabsolute',onA,true);window.removeEventListener('devicemotion',onM,true);sg.textContent='Start sensors';}
-    function start(){
-      const secure=window.isSecureContext;
-      st.textContent='Starting...';
-      const go=function(){on=true;n=0;empty=0;last=lastAbs=lastMot=null;window.addEventListener('deviceorientation',onO,true);window.addEventListener('deviceorientationabsolute',onA,true);window.addEventListener('devicemotion',onM,true);sg.textContent='Stop';show();
-        setTimeout(function(){if(!on)return;st.textContent=n?'Sensors are working. Turn the phone and watch the numbers change. Compass is magnetic north and can be off by 10-30 deg indoors.':(secure?(empty?'The browser sent sensor events but with no values, so this device has no usable sensors or they are blocked for this page (a desktop has none).':'No sensor data arrived after 3 s. This page may be blocked from reading sensors, or this device has none.'):'No sensor data. This page is not in a secure context, so the browser blocks sensors.');},3000);};
-      try{
-        if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function'){
-          DeviceOrientationEvent.requestPermission().then(function(r){if(r==='denied'){st.textContent='Permission was refused. Allow motion and orientation access in the browser settings.';}else go();}).catch(function(e){go();});
-        }else go();
-      }catch(e){st.textContent='Error: '+(e&&e.message||e);}}
-    sg.addEventListener('click',function(e){e.stopPropagation();if(on)stop();else start();});
-    sx.addEventListener('click',function(e){e.stopPropagation();stop();box.style.display='none';});
-    sb.addEventListener('pointerdown',function(e){e.stopPropagation();});
-    sb.addEventListener('click',function(e){e.stopPropagation();if(box.style.display==='none'||!box.style.display){box.style.display='block';st.textContent='Tap Start sensors, then turn the phone around.';sv.textContent='';}else{stop();box.style.display='none';}});
-    window.__photoSens={start:start,stop:stop,box:box};
-  })();
   /* ---- Look by phone: walk view follows the phone's turning ---- */
   (function(){
     const lb=document.getElementById('photoLook');if(!lb)return;
@@ -63973,7 +63947,7 @@ const updateMiniMap=createMinimap({layout:APARTMENT_LAYOUT,walk,camera,X,Z,SX,SZ
       if(!r[1]){return;}const cv=r[1];
       bm=cv;fname=(f.name||'photo').replace(/\.[^.]+$/,'').replace(/[^A-Za-z0-9_-]+/g,'-').slice(0,40)||'photo';pdate=exifDate(r[0])||(f.lastModified?new Date(f.lastModified):new Date());
       const sm=Math.min(1,1280/Math.max(cv.width,cv.height));pv.width=Math.round(cv.width*sm);pv.height=Math.round(cv.height*sm);pvx.drawImage(cv,0,0,pv.width,pv.height);
-      op.value=50;pv.style.opacity=.5;undoPose=null;pins=[];bUndo.hidden=true;sugBox.style.display='none';roomSel.value='';oldFov=camera.fov;al.hidden=false;setMin(false);touched=false;fit();
+      op.value=50;pv.style.opacity=.5;if(window.__splitOff)window.__splitOff();undoPose=null;pins=[];bUndo.hidden=true;roomSel.value='';oldFov=camera.fov;al.hidden=false;setMin(false);touched=false;fit();
       say('Walk and turn until the model lines up with the photo (a door frame or wall corner is easiest). Then Refine or Stamp.');
       clearTimeout(minT);minT=setTimeout(function(){if(!touched&&!al.hidden&&!busy)setMin(true);},9000);});});
   panel.addEventListener('pointerdown',function(){touched=true;});
@@ -64058,76 +64032,24 @@ const updateMiniMap=createMinimap({layout:APARTMENT_LAYOUT,walk,camera,X,Z,SX,SZ
     const slug=d.caption.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),name=fname+'_stamped_'+d.ver+'_'+slug+'_x'+Math.round(d.px)+'_y'+Math.round(d.py)+'_b'+Math.round(d.brg)+'.jpg';
     c.toBlob(function(b){if(!b){say('Could not save the photo at this size.');return;}window.__photoExif(b,tx).then(function(bb){if(window.__saveFile)window.__saveFile(name,bb);say('Saved '+name+(shr?' (this phone could not stamp the full size, so it was saved at 4096 px on the long side).':' at full size.')+' Pick another photo or tap Cancel to close.');window.__photoLast=name;});},'image/jpeg',.92);});
   /* ---- Suggest location: look at the photo's edges and find the room, spot and direction in the (bare) model that look most like it ---- */
-  const bSug={addEventListener:function(){},textContent:''},sugBox=al.querySelector('[data-pa-sug]'),roomSel=al.querySelector('[data-pa-room]');
-  let scanStop=false,scanning=false;
+  const roomSel=al.querySelector('[data-pa-room]');
   const ROOMKEY={'Foyer':'foyer','Living room':'living','Dining area':'dining','Kitchen':'kitchen','Bedroom 1':'bed1','Master bedroom':'bed2','Bedroom 2':'kids','Bedroom 1 bath':'bath1','Master bath':'bath2','Bedroom 2 bath':'bath3','Bedroom 1 balcony':'balc1','Living balcony':'balc2','Bedroom 2 balcony':'balc3','Kitchen balcony':'balc4','Store room':'store'};
   (function(){try{const have=window.__photoRoomList();Object.keys(ROOMKEY).forEach(function(n){const o=document.createElement('option');o.value=n;o.textContent=n;roomSel.appendChild(o);});}catch(e){}})();
   roomSel.addEventListener('change',function(){touched=true;const k=ROOMKEY[roomSel.value];if(!k||!window.__walkTo)return;const before=curPose();window.__walkTo(k);undoPose=before;bUndo.hidden=false;say('Moved to '+roomSel.value+'. Turn and walk to where you stood; Undo align goes back.');});
-  function blur2(a,w,h,r){const o=new Float32Array(a.length),t=new Float32Array(a.length);
-    for(let y=0;y<h;y++){let acc=0,n=0;for(let x=-r;x<=r;x++){if(x>=0&&x<w){acc+=a[y*w+x];n++;}}for(let x=0;x<w;x++){t[y*w+x]=acc/n;const xo=x-r,xi=x+r+1;if(xo>=0){acc-=a[y*w+xo];n--;}if(xi<w){acc+=a[y*w+xi];n++;}}}
-    for(let x=0;x<w;x++){let acc=0,n=0;for(let y=-r;y<=r;y++){if(y>=0&&y<h){acc+=t[y*w+x];n++;}}for(let y=0;y<h;y++){o[y*w+x]=acc/n;const yo=y-r,yi=y+r+1;if(yo>=0){acc-=t[yo*w+x];n--;}if(yi<h){acc+=t[yi*w+x];n++;}}}return o;}
-  function edges2(g,w,h,rr){const b=blur2(g,w,h,1),m=new Float32Array(w*h);let sum=0;
-    for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){const i=y*w+x,gx=b[i-w+1]+2*b[i+1]+b[i+w+1]-b[i-w-1]-2*b[i-1]-b[i+w-1],gy=b[i+w-1]+2*b[i+w]+b[i+w+1]-b[i-w-1]-2*b[i-w]-b[i-w+1];m[i]=Math.hypot(gx,gy);sum+=m[i];}
-    const cap=3*sum/m.length+1e-6;for(let i=0;i<m.length;i++)if(m[i]>cap)m[i]=cap;
-    const o=blur2(m,w,h,rr);let s1=0,s2=0;const n=o.length;for(let i=0;i<n;i++){s1+=o[i];s2+=o[i]*o[i];}const mu=s1/n,sd=Math.sqrt(Math.max(1e-9,s2/n-mu*mu));for(let i=0;i<n;i++)o[i]=(o[i]-mu)/sd;return o;}
-  const FACES=[[[1,0,0],[0,1,0]],[[-1,0,0],[0,1,0]],[[0,1,0],[0,0,1]],[[0,-1,0],[0,0,-1]],[[0,0,1],[0,1,0]],[[0,0,-1],[0,1,0]]];
-  function scan(o){o=o||{};return new Promise(function(resolve){
-    const D=Math.PI/180,step=o.step||window.__scanStep||1.0,pw=bm.width,ph=bm.height,RWc=96,RHc=Math.max(32,Math.round(RWc*ph/pw)),S=80;
-    const c=document.createElement('canvas');c.width=RWc;c.height=RHc;const cx=c.getContext('2d');cx.drawImage(bm,0,0,RWc,RHc);const dd=cx.getImageData(0,0,RWc,RHc).data,pg=new Float32Array(RWc*RHc);
-    for(let i=0;i<pg.length;i++)pg[i]=.299*dd[i*4]+.587*dd[i*4+1]+.114*dd[i*4+2];
-    const pe3=edges2(pg,RWc,RHc,3),pe2=edges2(pg,RWc,RHc,2),lens0=+fv.value;
-    const pts=[],boxes=walk.boxes||[],R=.3;
-    for(let x=CB.x0+.5;x<CB.x1-.3;x+=step)for(let z=CB.z0+.5;z<CB.z1-.3;z+=step){if(o.box&&(x<o.box[0]||x>o.box[2]||z<o.box[1]||z>o.box[3]))continue;let ok=true;for(let i=0;i<boxes.length;i++){const b=boxes[i],qx=Math.max(b.min.x,Math.min(x,b.max.x)),qz=Math.max(b.min.z,Math.min(z,b.max.z));if((x-qx)*(x-qx)+(z-qz)*(z-qz)<R*R){ok=false;break;}}if(ok)pts.push({x:x,z:z});}
-    const rcam=camera.clone();rcam.aspect=1;rcam.fov=90;rcam.updateProjectionMatrix();const rtt=new THREE.WebGLRenderTarget(S,S),rb=new Uint8Array(S*S*4),eyeY=camera.position.y;
-    setBareTemp(true);const ch=[];CEIL.children.forEach(function(m){const pl=m.isMesh&&m.geometry&&m.geometry.type==='PlaneGeometry';ch.push([m,m.visible]);m.visible=pl;});
-    function cleanup(){ch.forEach(function(q){q[0].visible=q[1];});setBareTemp(false);rtt.dispose();}
-    let pi=0,fi=0;const cubes=[];
-    function face(p,k){CEIL.visible=true;rcam.position.set(p.x,eyeY,p.z);rcam.up.set(FACES[k][1][0],FACES[k][1][1],FACES[k][1][2]);rcam.lookAt(p.x+FACES[k][0][0],eyeY+FACES[k][0][1],p.z+FACES[k][0][2]);rcam.updateMatrixWorld(true);rcam.matrixWorldInverse.copy(rcam.matrixWorld).invert();
-      const prev=renderer.getRenderTarget();renderer.setRenderTarget(rtt);renderer.render(scene,rcam);renderer.readRenderTargetPixels(rtt,0,0,S,S,rb);renderer.setRenderTarget(prev);
-      const l=new Uint8Array(S*S);for(let i=0;i<S*S;i++)l[i]=(.299*rb[i*4]+.587*rb[i*4+1]+.114*rb[i*4+2]);const e=rcam.matrixWorldInverse.elements;
-      return {l:l,R:[e[0],e[4],e[8],e[1],e[5],e[9],e[2],e[6],e[10]]};}
-    const gbuf=new Float32Array(RWc*RHc);
-    function reproj(cube,yaw,pitch,fovD){const tv=Math.tan(fovD*D/2)*RHc/Math.hypot(RWc,RHc),f=(RHc/2)/tv,cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);let q=0;
-      for(let j=0;j<RHc;j++){const y=-(j+.5-RHc/2)/f;for(let i=0;i<RWc;i++){const x=(i+.5-RWc/2)/f,y1=cp*y+sp,z1=sp*y-cp,dx=cy*x+sy*z1,dz=-sy*x+cy*z1,dy=y1,ax=Math.abs(dx),ay=Math.abs(dy),az=Math.abs(dz);
-        const k=(ax>=ay&&ax>=az)?(dx>0?0:1):(ay>=az?(dy>0?2:3):(dz>0?4:5)),fc=cube[k],R=fc.R,cxv=R[0]*dx+R[1]*dy+R[2]*dz,cyv=R[3]*dx+R[4]*dy+R[5]*dz,czv=-(R[6]*dx+R[7]*dy+R[8]*dz)||1e-6;
-        let col=((cxv/czv*.5+.5)*S)|0,row=((cyv/czv*.5+.5)*S)|0;col=col<0?0:col>=S?S-1:col;row=row<0?0:row>=S?S-1:row;gbuf[q++]=fc.l[row*S+col];}}return gbuf;}
-    function sc(cube,yaw,pitch,fovD,rr,pe){const e=edges2(reproj(cube,yaw,pitch,fovD),RWc,RHc,rr);let t=0;for(let i=0;i<e.length;i++)t+=e[i]*pe[i];return t/e.length;}
-    let phase='cube',st1=[],i1=0,top=[],i2=0,res=[];
-    function tick(){
-      if(scanStop){cleanup();return resolve(null);}
-      const t0=performance.now();
-      while(performance.now()-t0<45){
-        if(phase==='cube'){
-          if(pi>=pts.length){phase='s1';i1=0;continue;}
-          if(fi===0)cubes[pi]=[];cubes[pi][fi]=face(pts[pi],fi);fi++;if(fi>=6){fi=0;pi++;}
-        }else if(phase==='s1'){
-          if(i1>=pts.length){st1.sort(function(a,b){return b.s-a.s;});top=st1.slice(0,12);phase='s2';i2=0;continue;}
-          let best={s:-9};for(let h=0;h<24;h++){const y=h*15*D,v=sc(cubes[i1],y,0,lens0,3,pe3);if(v>best.s)best={s:v,y:y};}st1.push({p:i1,y:best.y,s:best.s});i1++;
-        }else if(phase==='s2'){
-          if(i2>=top.length){break;}
-          const t=top[i2];let best={s:-9};
-          for(let dy=-10;dy<=10;dy+=2.5)for(let dp=-6;dp<=6;dp+=6)for(let df=-8;df<=8;df+=8){const y=t.y+dy*D,v=sc(cubes[t.p],y,dp*D,lens0+df,2,pe2);if(v>best.s)best={s:v,y:y,pitch:dp*D,fov:lens0+df};}
-          res.push({x:pts[t.p].x,z:pts[t.p].z,yaw:best.y,pitch:best.pitch,fov:best.fov,score:best.s});i2++;
-        }
-        if(phase==='s2'&&i2>=top.length){break;}
-      }
-      if(phase==='s2'&&i2>=top.length){
-        cleanup();res.sort(function(a,b){return b.score-a.score;});const out=[];
-        for(let i=0;i<res.length&&out.length<3;i++){const r=res[i];let dup=false;out.forEach(function(q){let dy=Math.abs(((r.yaw-q.yaw)/D+540)%360-180);if(Math.hypot(r.x-q.x,r.z-q.z)<1.6&&dy>-1&&Math.abs(((r.yaw-q.yaw)/D+540)%360-180)<150)dup=true;});if(!dup)out.push(r);}
-        return resolve({cands:out,points:pts.length,all:res,pts:pts});}
-      say(phase==='cube'?'Scanning rooms… '+Math.round(40*pi/Math.max(1,pts.length))+'%':(phase==='s1'?'Comparing… '+Math.round(40+35*i1/Math.max(1,pts.length))+'%':'Fine-tuning… '+Math.round(75+25*i2/12)+'%'),true);
-      setTimeout(tick,0);}
-    setTimeout(tick,20);});}
-  bSug.addEventListener('click',function(){
-    if(!bm)return;if(scanning){scanStop=true;return;}
-    scanning=true;scanStop=false;bSug.textContent='Stop';sugBox.style.display='none';touched=true;
-    scan().then(function(r){scanning=false;bSug.textContent='Suggest location (beta)';if(!r){say('Search stopped.');return;}
-      sugBox.innerHTML='';sugBox.style.display='flex';
-      r.cands.forEach(function(c,i){const d=window.__photoDescribe(c.x,c.z,c.yaw),b=document.createElement('button');b.type='button';b.style.cssText='font:600 12px var(--f-ui);padding:7px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;cursor:pointer;text-align:left';
-        b.textContent=(i+1)+' · '+d.room+', '+d.look+' ('+Math.round(c.score*100)+')';b.addEventListener('click',function(){undoPose=curPose();applyPose({x:c.x,z:c.z,y:camera.position.y,yaw:c.yaw,pitch:c.pitch,fov:c.fov});bUndo.hidden=false;say('Moved to option '+(i+1)+'. Compare with the Photo / Model slider, then use Pin points to fine-tune, or Undo align.');});sugBox.appendChild(b);});
-      const nb=document.createElement('button');nb.type='button';nb.textContent='Not here';nb.style.cssText='font:600 12px var(--f-ui);padding:7px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer';nb.addEventListener('click',function(){sugBox.style.display='none';});sugBox.appendChild(nb);
-      const best=r.cands[0]?r.cands[0].score:0;say(r.cands.length?('Best guesses from '+r.points+' spots. '+(best<.6?'Low confidence: check every option against the photo, the first one is often wrong. ':'')+'Tap one to go there; the number is the match (100 = identical edges).'):'No candidates found.');});});
-  window.__photoAlign={open:function(){return !al.hidden;},load:function(canvas,date){bm=canvas;pdate=date||new Date();fname='test';const sm=1;pv.width=canvas.width;pv.height=canvas.height;pvx.drawImage(canvas,0,0);oldFov=camera.fov;al.hidden=false;setMin(false);fit();},scan:scan,pick:pick,pins:function(){return pins;},start:startPins,solve:solvePose,toScreen:toScreen,rect:function(){return rect();},state:function(){return {pinning:pinning,pstep:pstep};},msg:function(){return msg.textContent;},pose:curPose,render:function(p,w,h){const c=document.createElement('canvas');c.width=w;c.height=h;const t=new THREE.WebGLRenderTarget(w,h),b=new Uint8Array(w*h*4),cm=camera.clone();cm.aspect=w/h;const diag=p.fov*Math.PI/180;cm.fov=2*Math.atan(Math.tan(diag/2)*h/Math.hypot(w,h))*180/Math.PI;cm.position.set(p.x,p.y,p.z);cm.rotation.set(p.pitch,p.yaw,0,'YXZ');cm.updateProjectionMatrix();cm.updateMatrixWorld(true);const pr=renderer.getRenderTarget();renderer.setRenderTarget(t);renderer.render(scene,cm);renderer.readRenderTargetPixels(t,0,0,w,h,b);renderer.setRenderTarget(pr);t.dispose();const x=c.getContext('2d'),im=x.createImageData(w,h);for(let y=0;y<h;y++)for(let i=0;i<w;i++){const a=((h-1-y)*w+i)*4,o=(y*w+i)*4;im.data[o]=b[a];im.data[o+1]=b[a+1];im.data[o+2]=b[a+2];im.data[o+3]=255;}x.putImageData(im,0,0);return c;}};
+  /* V266: Compare slider: the photo shows left of a draggable line, the model right of it */
+  (function(){const sb=al.querySelector('[data-pa-split]'),hd=al.querySelector('[data-pa-split-h]');if(!sb||!hd)return;let on=false;
+    function setX(px){const w=window.innerWidth,x=Math.max(8,Math.min(w-8,px));pv.style.setProperty('--sx',x+'px');hd.style.left=x+'px';}
+    function set(v){on=!!v;pv.classList.toggle('split',on);hd.hidden=!on;sb.setAttribute('aria-pressed',String(on));if(on){if(!hd.dataset.set){setX(window.innerWidth/2);hd.dataset.set='1';}op.disabled=true;}else{op.disabled=false;}}
+    sb.addEventListener('click',function(){set(!on);});
+    let drag=false;hd.addEventListener('pointerdown',function(e){drag=true;try{hd.setPointerCapture(e.pointerId);}catch(x){}setX(e.clientX);e.stopPropagation();});
+    hd.addEventListener('pointermove',function(e){if(drag)setX(e.clientX);});
+    function up(){drag=false;}hd.addEventListener('pointerup',up);hd.addEventListener('pointercancel',up);
+    window.addEventListener('resize',function(){if(on)setX(parseFloat(pv.style.getPropertyValue('--sx'))||window.innerWidth/2);});
+    al.querySelector('[data-pa-pin]').addEventListener('click',function(){set(false);},true);
+    window.__splitOff=function(){set(false);hd.dataset.set='';};
+    window.__split=function(v,x){set(v);if(x!==undefined)setX(x);};
+  })();
+  window.__photoAlign={open:function(){return !al.hidden;},load:function(canvas,date){bm=canvas;pdate=date||new Date();fname='test';const sm=1;pv.width=canvas.width;pv.height=canvas.height;pvx.drawImage(canvas,0,0);oldFov=camera.fov;al.hidden=false;setMin(false);fit();},pick:pick,pins:function(){return pins;},start:startPins,solve:solvePose,toScreen:toScreen,rect:function(){return rect();},state:function(){return {pinning:pinning,pstep:pstep};},msg:function(){return msg.textContent;},pose:curPose,render:function(p,w,h){const c=document.createElement('canvas');c.width=w;c.height=h;const t=new THREE.WebGLRenderTarget(w,h),b=new Uint8Array(w*h*4),cm=camera.clone();cm.aspect=w/h;const diag=p.fov*Math.PI/180;cm.fov=2*Math.atan(Math.tan(diag/2)*h/Math.hypot(w,h))*180/Math.PI;cm.position.set(p.x,p.y,p.z);cm.rotation.set(p.pitch,p.yaw,0,'YXZ');cm.updateProjectionMatrix();cm.updateMatrixWorld(true);const pr=renderer.getRenderTarget();renderer.setRenderTarget(t);renderer.render(scene,cm);renderer.readRenderTargetPixels(t,0,0,w,h,b);renderer.setRenderTarget(pr);t.dispose();const x=c.getContext('2d'),im=x.createImageData(w,h);for(let y=0;y<h;y++)for(let i=0;i<w;i++){const a=((h-1-y)*w+i)*4,o=(y*w+i)*4;im.data[o]=b[a];im.data[o+1]=b[a+1];im.data[o+2]=b[a+2];im.data[o+3]=255;}x.putImageData(im,0,0);return c;}};
 })();
 
 /* normal view: controls and icon guide, opened by the i button; seated button title follows the posture */
@@ -64193,7 +64115,7 @@ dial.addEventListener('click',function(e){
   tray.addEventListener('click',function(){setTimeout(function(){trayShow(false);},0);},true);
   document.addEventListener('pointerdown',function(e){if(tray.classList.contains('open')&&!tray.contains(e.target)&&e.target!==pm&&!pm.contains(e.target))trayShow(false);},true);
   window.__trayClose=function(){trayShow(false);};
-  ['miniToggle','miniPlan','eyeToggle'].forEach(function(id){const el=document.getElementById(id);if(el)row.appendChild(el);});
+  ['miniToggle','eyeToggle'].forEach(function(id){const el=document.getElementById(id);if(el)row.appendChild(el);});
   row.appendChild(pm);
   /* V264: lens button, Normal 70, Wide 90, Ultra-wide 110 degrees */
   const ln=document.createElement('button');ln.id='walkLens';ln.className='wi';ln.type='button';
@@ -64205,8 +64127,22 @@ dial.addEventListener('click',function(e){
   window.__lensReset=function(){li=0;lt=null;lensLabel();};
   window.__lens=function(i){if(i===undefined)return LENS[li];li=((i%3)+3)%3;lensLabel();lensGo(LENS[li]);};
   lensLabel();row.appendChild(ln);
-  ['photoSens','photoLook','bareBtn','walkExit'].forEach(function(id){const el=document.getElementById(id);if(el)row.appendChild(el);});
+  ['photoLook','bareBtn','walkExit'].forEach(function(id){const el=document.getElementById(id);if(el)row.appendChild(el);});
   row.appendChild(tray);ui.appendChild(row);})();
+/* V266: one Tools button gathers the right-hand column in walk view */
+(function(){const ui=document.getElementById('walkUI');if(!ui)return;const b=document.createElement('button');b.id='walkMore';b.type='button';b.setAttribute('aria-pressed','false');
+  b.title='More tools: doors, windows, saved views, sketch, tour, record, guide';b.setAttribute('aria-label',b.title);
+  b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="1.9"/><circle cx="12" cy="6" r="1.9"/><circle cx="18" cy="6" r="1.9"/><circle cx="6" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="18" cy="12" r="1.9"/><circle cx="6" cy="18" r="1.9"/><circle cx="12" cy="18" r="1.9"/><circle cx="18" cy="18" r="1.9"/></svg>';
+  b.addEventListener('pointerdown',function(e){e.stopPropagation();});
+  b.addEventListener('click',function(e){e.stopPropagation();const o=!document.body.classList.contains('wkMore');document.body.classList.toggle('wkMore',o);b.setAttribute('aria-pressed',String(o));});
+  ui.appendChild(b);})();
+/* V267: the same Tools button in Overview */
+(function(){const fab=document.getElementById('fab');if(!fab)return;const b=document.createElement('button');b.id='ovMore';b.type='button';b.setAttribute('aria-pressed','false');
+  b.title='Tools: doors, windows, saved views, sketch, guide, screenshot, zoom';b.setAttribute('aria-label',b.title);
+  b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="1.9"/><circle cx="12" cy="6" r="1.9"/><circle cx="18" cy="6" r="1.9"/><circle cx="6" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="18" cy="12" r="1.9"/><circle cx="6" cy="18" r="1.9"/><circle cx="12" cy="18" r="1.9"/><circle cx="18" cy="18" r="1.9"/></svg>';
+  b.addEventListener('pointerdown',function(e){e.stopPropagation();});
+  b.addEventListener('click',function(e){e.stopPropagation();const o=!document.body.classList.contains('ovMore');document.body.classList.toggle('ovMore',o);b.setAttribute('aria-pressed',String(o));});
+  fab.insertBefore(b,fab.firstChild);})();
 /* V262: More buttons, and one Hide-all eye button that works in every view */
 (function(){
   const btn=document.getElementById('hideAll');if(!btn)return;
@@ -64808,7 +64744,7 @@ renderer.setAnimationLoop(function(now){
 
 /* ---------- View report: copy the camera + settings for Claude, mark a spot, paste a view to jump ---------- */
 (function(){
-  const VERSION='V265',ERR=[];
+  const VERSION='V267',ERR=[];
   function pushErr(t){ERR.push(String(t).slice(0,160));if(ERR.length>8)ERR.shift();}
   window.addEventListener('error',function(e){pushErr('error: '+e.message);});
   window.addEventListener('unhandledrejection',function(e){pushErr('promise: '+(e.reason&&e.reason.message||e.reason));});
